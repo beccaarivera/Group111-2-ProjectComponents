@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
+
+		<style>
+    body {
+          background: rgb(2,0,36);
+          background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,9,0.9836309523809523) 0%, rgba(0,212,255,1) 100%);
+        }
+        h1 {color:red;}
+        h1 { text-align: center }
+        h1{font-size:100px;height:50px;}
+        h2{text-align:center}
+        #score{font-size:50px;color:red}
+        #start{font-size:50px;color:red}
+        #about{font-size:50px;color:red}
+        #parent {position: relative;}
+        #child {     position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    margin: 30% 0 0 -25%;}
+  }
+		</style>
+	</head>
+	<body>
+
+		<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light" style="border-bottom: 2px solid #e84855;">
+			<a class="navbar-brand" href="#" style="text-shadow:0px 3px 5px rgba(0,0,0,.15); font-weight:350;font-size:30px;color:#e84855;">Jimmy's Maze</a>
+			<ul class=" navbar-nav mr-auto">
+				<li class="navbar-item">
+					<a class="nav-link" href="#">Home</a>
+				</li>
+				<li class="navbar-item ">
+					<a class="nav-link" href="pages/leader_board/index.html">Leader Board</a>
+				</li>
+					<li class="navbar-item ">
+						<a class="nav-link" href="pages/about/index.html">About</a>
+					</li>
+				<li class="navbar-item ">
+					<a class="nav-link" href="pages/user_profile/index.html">Profile</a>
+				</li>
+			</ul>
+			<a class="btn my-2 my-sm-0 rounded-circle" style="padding:0px;padding-top:7px;padding-right:.5px;width:65px; height:65px;" href="#" >
+				<img class="rounded-circle" src="res/img/profile.png" width="50px"height="50px"/>
+			</a>
+		</nav>
+
+		<h1 >Jimmy's maze!</h1>
+		<div class="" id="parent">
+			<div class="col-md-12 text-center">
+				<div class="btn-group-vertical" id="child">
+					<button type="button" class="btn btn-outline-danger"  id="score" onclick="window.location.href = 'pages/leader_board/index.html'">Check Leaderboard</button>
+					<button type="button" class="btn btn-outline-danger" id="about"onclick="window.location.href = 'pages/about/index.html'">About</button>
+					<button type="button" class="btn btn-outline-danger" id="start">Start Game</button>
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
