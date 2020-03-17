@@ -111,36 +111,31 @@ function playerHit(player, spike) {
 function update() {
   if (this.cursors.left.isDown) {
     this.player.setVelocityX(-200);
-    if (this.player.body.onFloor()) {
-      this.player.play('walk', true);
-    }
-  } else if (this.cursors.right.isDown) {
-    this.player.setVelocityX(200);
-    if (this.player.body.onFloor()) {
-      this.player.play('walk', true);
-    }
+    this.player.play('walk', true);
   }
-
-    else if (this.cursors.down.isDown) {
-      this.player.setVelocityY(200);
-
-    }
-    /*else if (this.cursors.down.isDown) {
-      this.player.setVelocityY(-200);
-
-    }*/
-    else if (this.cursors.up.isDown)
-    {
-      this.player.setVelocityY(-200);
-    }
-    else{
-      this.player.setVelocity(0);
-    }
+  else if (this.cursors.right.isDown) {
+    this.player.setVelocityX(200);
+    this.player.play('walk', true);
+  }
+  else if (this.cursors.down.isDown) {
+    this.player.setVelocityY(200);
+    this.player.play('walk', true);
+  }
+  else if (this.cursors.up.isDown){
+    this.player.setVelocityY(-200);
+    this.player.play('walk', true);
+  }
+  else{
+    this.player.setVelocity(0);
+    this.player.play('walk', false);
+    this.player.play('idle', true);
+  }
 
 
   // Player can jump while walking any direction by pressing the space bar
   // or the 'UP' arrow
-  if ((this.cursors.space.isDown || this.cursors.up.isDown) && this.player.body.onFloor()) {
+/*  if ((this.cursors.space.isDown || this.cursors.up.isDown) && this.player.body.onFloor()) {
     this.player.setVelocityY(-350);
     this.player.play('jump', true);
-  }}
+  }*/
+}
