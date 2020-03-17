@@ -133,6 +133,9 @@ function update() {
     {
       this.player.setVelocityY(-200);
     }
+    else{
+      this.player.setVelocity(0);
+    }
 
 
   // Player can jump while walking any direction by pressing the space bar
