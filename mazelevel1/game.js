@@ -15,7 +15,7 @@ const config = {
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 500 },
+      gravity: { n: 500 },
       debug: true,
     },
   }
@@ -25,8 +25,8 @@ const game = new Phaser.Game(config);
 
 function preload() {
   this.load.image('background', 'assets/images/background.png');
-    this.load.image('spike', 'assets/images/spike.png');
-     this.load.atlas('player', 'assets/images/kenney_player.png','assets/images/kenney_player_atlas.json');
+  this.load.image('spike', 'assets/images/spike.png');
+  this.load.atlas('player', 'assets/images/kenney_player.png','assets/images/kenney_player_atlas.json');
       this.load.image('tiles', 'assets/tilesets/platformPack_tilesheet.png');
         this.load.tilemapTiledJSON('map', 'assets/tilemaps/mazelevel1.json');
 
@@ -119,15 +119,21 @@ function update() {
     if (this.player.body.onFloor()) {
       this.player.play('walk', true);
     }
-  } else {
-    // If no keys are pressed, the player keeps still
-    this.player.setVelocityX(0);
-    // Only show the idle animation if the player is footed
-    // If this is not included, the player would look idle while jumping
-    if (this.player.body.onFloor()) {
-      this.player.play('idle', true);
-    }
   }
+
+    else if (this.cursors.down.isDown) {
+      this.player.setVelocityY(200);
+
+    }
+    else if (this.cursors.down.isDown) {
+      this.player.setVelocityY(-200);
+
+    }
+    else if (this.cursors.up.isDown)
+    {
+      this.player.setVelocityY(-200);
+    }
+
 
   // Player can jump while walking any direction by pressing the space bar
   // or the 'UP' arrow
