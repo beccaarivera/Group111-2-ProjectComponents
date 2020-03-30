@@ -1,5 +1,14 @@
 
+<?php 
+session_start();
 
+if($_SESSION['logged_in']){
+	echo '<script>
+	alert("You are already logged in...");
+	document.location = "../../";
+	</script>'; 
+}
+?>
 <html lang="en">
 
 	<head>
@@ -8,36 +17,18 @@
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
 
-		<link href="../../res/css/universal.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../../res/css/universal.css" />
 		<style>
 				.jumbotron input{
 					margin-bottom:25px;
 				}
+				
 		</style>
 		<title>Jimmy's Maze</title>
 	</head>
 	<body class="center text-center" style="">
 
-		<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light" style="border-bottom: 2px solid #e84855;">
-			<a class="navbar-brand" href="#" style="text-shadow:0px 3px 5px rgba(0,0,0,.15); font-weight:350;font-size:30px;color:#e84855;">Jimmy's Maze</a>
-			<ul class=" navbar-nav mr-auto">
-				<li class="navbar-item">
-					<a class="nav-link" href="../../home.html">Home</a>
-				</li>
-				<li class="navbar-item ">
-					<a class="nav-link" href="../leader_board/index.html">Leader Board</a>
-				</li>
-				<li class="navbar-item ">
-					<a class="nav-link" href="../about/index.html">About</a>
-				</li>
-				<li class="navbar-item ">
-					<a class="nav-link" href="../user_profile/index.html">Profile</a>
-				</li>
-			</ul>
-			<a class="btn my-2 my-sm-0 rounded-circle  btn-prof" style="padding:0px;padding-top:7px;padding-right:.5px;width:65px; height:65px;" href="#" >
-				<img class="rounded-circle" src="../../res/img/profile.png" width="50px"height="50px"/>
-			</a>
-		</nav>
+	<?php require '../../res/elements/navbar.php'; ?>
 
 		<div style="width:600px; border-radius:10px; height:190px;margin-top:15px;margin-left:auto;margin-right:auto;background-color:#e9ecef;">
 			<h1 style="margin-left:auto;margin-right:auto; color:#e84855;font-size:80px;"> JIMMY'S MAZE </h1>
@@ -50,8 +41,14 @@
 				<input type="text" id="user" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required autofocus />
 				<label for="inputPassword" class="sr-only">Password</label>
 				<input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required />
-				<p style="color:#e84855;" > Theres almost no chance you'll be able to recover a lost password here...</p>
-				<button class="btn btn-lg btn-primary"><a href="../register/index.html">Register</a></button>
+				
+				<?php 
+				if(isset($_SESSION['login_error'])){
+					ECHO '<p  style="color:#e84855;" >'.$_SESSION['login_error'].'</p>';
+				}
+				?>
+				
+				<a class="btn btn-lg btn-primary" href="../register">Register</a>
 				<button class="btn btn-lg btn-primary"  type="submit">Login</button>
 			</form>
 			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"/>
