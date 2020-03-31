@@ -11,6 +11,7 @@ margin-left:5px;margin-right:5px;
 }
 .btn-primary{
 	background-color:#5eb7e7;
+	text-decoration:none;
 	border-color:#5eb7e7;
 	color:#eee;
 	box-shadow: inset 0px 0px 6px rgba(0,0,0,.15);
