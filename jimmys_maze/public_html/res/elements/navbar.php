@@ -1,6 +1,10 @@
 
 <script>
 var visibleHub = false;
+
+document.onload = function(){
+	visibleHub = false;
+};
 function openUserHub(){
 	if(visibleHub){
 		document.getElementById("userHub").style.display = "none";
@@ -10,7 +14,6 @@ function openUserHub(){
 		visibleHub = true;
 	}
 }
-
 </script>
 		<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light" style="border-bottom: 2px solid #e84855;">
 			<a class="navbar-brand" href="#" style="text-shadow:0px 3px 5px rgba(0,0,0,.15); font-weight:350;font-size:30px;color:#e84855;">Jimmy's Maze</a>
@@ -28,8 +31,8 @@ function openUserHub(){
 					<a class="nav-link" href="/public_html/pages/profile">Profile</a>
 				</li>
 			</ul>
-			<a class="btn my-2 my-sm-0 rounded-circle  btn-prof" style="padding:0px;padding-top:7px;padding-right:.5px;width:65px; height:65px;" href="#" >
-				<img class="rounded-circle" src="/public_html/res/img/profile.png" width="50px"height="50px" onclick="openUserHub()" />
+			<a onclick="openUserHub()" class="btn my-2 my-sm-0 rounded-circle  btn-prof" style="padding:0px;padding-top:7px;padding-right:.5px;width:65px; height:65px;" href="#" >
+				<img class="rounded-circle" src="/public_html/res/img/profile.png" width="50px"height="50px" />
 			</a>
 			<style>
 				#userHub{
