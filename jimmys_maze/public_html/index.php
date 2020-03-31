@@ -27,6 +27,11 @@ session_start();
 			box-shadow:0px 0px 15px rgba(255,255,255,.18), 0px 0px 5px rgba(255,255,255,.25);
 			border-color:white;
 		} 
+		.btn-group-vertical button{font-size:50px;font-size:50px;
+			background-color:#2D2831;
+			color:#fff;
+			font-weight:200;
+		}
 		.btn{
 			border-radius:8px;
 		}
