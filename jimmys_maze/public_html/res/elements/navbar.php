@@ -28,7 +28,7 @@ function openUserHub(){
 					<a class="nav-link" href="/public_html/pages/about">About</a>
 				</li>
 				<li class="navbar-item ">
-					<a class="nav-link" href="/public_html/pages/profile">Profile</a>
+					<a class="nav-link" href="/public_html/pages/user_profile">Profile</a>
 				</li>
 			</ul>
 			<a onclick="openUserHub()" class="btn my-2 my-sm-0 rounded-circle  btn-prof" style="padding:0px;padding-top:7px;padding-right:.5px;width:65px; height:65px;" href="#" >
