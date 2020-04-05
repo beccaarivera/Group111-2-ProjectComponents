@@ -20,12 +20,13 @@ if (empty($post_username) || empty($post_password)) {
 }
 
 
-if(!($post_password_repeat === $post_password)){
+if($post_password_repeat != $post_password){
 	
 	$_SESSION['register_error'] = 'Those passwords do not match ...';
 	header("Location: /public_html/pages/register");
 	
 }
+else{
 
 // We need to check if the account with that username exists.
 if ($result = $con->query("SELECT uuid FROM users WHERE username = '$post_username'")) {
@@ -52,6 +53,7 @@ if ($result = $con->query("SELECT uuid FROM users WHERE username = '$post_userna
 } else {
 	// Something is wrong with the sql statement, check to make sure accounts table exists with all 3 fields.
 	echo 'Could not prepare statement!1';
+}
 }
 $con->close();
 ?>

@@ -13,13 +13,12 @@ $_SESSION['login_error'] = "You have entered an incorrect username or password..
 
 if ( $result->num_rows == 0 ){ // User doesn't exist
     $_SESSION['logged_in'] = FALSE;
-$_SESSION['login_error'] = "You have enterfdsgsfdged an incorrect username or password...";
+    $_SESSION['login_error'] = "You have enterfdsgsfdged an incorrect username or password...";
 	header("Location: /public_html/pages/login");
 }else { // User exists
     $user = $result->fetch_assoc();
-    $pass = password_hash($post_password, PASSWORD_DEFAULT);
-    if ( $pass === $user['password'] ) {
-        $_SESSION['login_error'] = null;
+    if ( password_verify($post_password, $user['password']) ) {
+        $_SESSION['login_error'] = NULL;
         $_SESSION['time_registered'] = $user['time_registered'];
         $_SESSION['username'] = $user['username'];
         $_SESSION['user_uuid'] = $user['uuid'];
@@ -27,7 +26,7 @@ $_SESSION['login_error'] = "You have enterfdsgsfdged an incorrect username or pa
         // This is how we'll know the user is logged in
         $_SESSION['logged_in'] = TRUE;
 		
-		header("Location: /");
+		header("Location: /public_html/pages/about");
         
     }else {
         $_SESSION['logged_in'] = FALSE;

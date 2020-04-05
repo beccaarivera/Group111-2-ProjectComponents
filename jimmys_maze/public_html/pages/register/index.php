@@ -43,6 +43,12 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
 				<input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required />
 				<input type="password" id="inputPasswordRepeat" name="password_repeat" class="form-control" placeholder="Repeat-Password" required />
 				<p style="color:#e84855;" > Theres almost no chance you'll be able to recover a lost password here... don't lose it.</p>
+
+				<?php
+				if(isset($_SESSION['register_error'])){
+					ECHO '<p  style="color:#e84855;" >'.$_SESSION['register_error'].'</p>';
+				}
+				?>
 				<button class="btn btn-lg btn-primary"  type="submit">Register</button>
 			</form>
 			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"/>
