@@ -57,8 +57,8 @@ function openUserHub(){
 			</style>
 			<div id="userHub">
 				<?php 
-					if($_SESSION['logged_in']){
-						echo '<div><button class="btn btn-lg btn-primary"  type="submit">Logout</button></div>';
+					if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
+						echo '<div><a href="/private_php/connect/logout.php" class="btn btn-lg btn-primary"  type="submit">Logout</a></div>';
 					}else{
 						
 					}
