@@ -49,9 +49,9 @@ session_start();
 			<h1 >Jimmy's maze!</h1>
 			<div class="col-md-12 text-center">
 				<div class="btn-group-vertical" >
-					<button type="button" class="btn btn-outline-danger"  id="score" onclick="window.location.href = 'pages/leader_board/index.html'">Check Leaderboard</button>
-					<button type="button" class="btn btn-outline-danger" id="about"onclick="window.location.href = 'pages/about/index.html'">About</button>
-					<button type="button" class="btn btn-outline-danger" id="start" onclick="window.location.href = '../maze_game/src/mazelevel1.html'">Start Game</button>
+					<button type="button" class="btn btn-outline-danger"  id="score" onclick="window.location.href = 'pages/leader_board'">Check Leaderboard</button>
+					<button type="button" class="btn btn-outline-danger" id="about"onclick="window.location.href = 'pages/about'">About</button>
+					<button type="button" class="btn btn-outline-danger" id="start" onclick="window.location.href = 'pages/game'">Start Game</button>
 
 				</div>
 			</div>

@@ -25,10 +25,10 @@ const game = new Phaser.Game(config);
 
 function preload() {
   this.load.image('background', 'assets/images/background.png');
-  this.load.image('spike', 'assets/images/spike.png');
-  this.load.atlas('player', 'assets/images/kenney_player.png','assets/images/kenney_player_atlas.json');
-      this.load.image('tiles', 'assets/tilesets/platformPack_tilesheet.png');
-        this.load.tilemapTiledJSON('map', 'assets/tilemaps/mazelevel1.json');
+  //this.load.image('spike', '/maze_game/src/assets/images/spike.png');
+  //this.load.atlas('player', '/maze_game/src/assets/images/kenney_player.png','assets/images/kenney_player_atlas.json');
+  //this.load.image('tiles', '/maze_game/src/assets/tilesets/platformPack_tilesheet.png');
+  //this.load.tilemapTiledJSON('map', '/maze_game/src/assets/tilemaps/mazelevel1.json');
 
 }
 
