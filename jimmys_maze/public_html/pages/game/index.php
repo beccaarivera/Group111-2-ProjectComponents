@@ -34,8 +34,6 @@
     #game {
       margin: 10px auto;
       padding: 0;
-      width: 1500px;
-      height:800px;
     }
   </style>
 </head>
@@ -44,8 +42,8 @@
 		<?php require_once '../../res/elements/navbar.php'; ?>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="game"></div>
-<script src="../../../maze_game/src/phaser.min.js"></script> 
-<script src="../../../maze_game/src/game.js"></script>
+<script src="/maze_game/src/phaser.min.js"></script>
+<script src="/maze_game/src/game.js"></script>
 </body>
 
 </html>
