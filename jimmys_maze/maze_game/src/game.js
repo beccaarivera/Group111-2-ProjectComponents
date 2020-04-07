@@ -23,11 +23,11 @@ const config = {
 const game = new Phaser.Game(config);
 
 function preload() {
-  this.load.image('background', '/maze_game/src/assets/images/background.png');
-  this.load.image('spike', '/maze_game/src/assets/images/spike.png');
-  this.load.atlas('player', '/maze_game/src/assets/images/kenney_player.png','/maze_game/src/assets/images/kenney_player_atlas.json');
-  this.load.image('tiles', '/maze_game/src/assets/tilesets/platformPack_tilesheet.png');
-  this.load.tilemapTiledJSON('map', '/maze_game/src/assets/tilemaps/mazelevel1.json');
+  this.load.image('background', '../../../maze_game/src/assets/images/background.png');
+  this.load.image('spike', '../../../maze_game/src/assets/images/spike.png');
+  this.load.atlas('player', '../../../maze_game/src/assets/images/kenney_player.png','../../../maze_game/src/assets/images/kenney_player_atlas.json');
+  this.load.image('tiles', '../../../maze_game/src/assets/tilesets/platformPack_tilesheet.png');
+  this.load.tilemapTiledJSON('map', '../../../maze_game/src/assets/tilemaps/mazelevel1.json');
 
 }
 
@@ -37,7 +37,7 @@ function create()
 const map = this.make.tilemap({ key: 'map' });
 const tileset = map.addTilesetImage('kenney_simple_platformer', 'tiles');
 const platforms = map.createStaticLayer('Platforms', tileset, 0, 0);
-//platforms.setCollisionByExclusion(-1, true);
+platforms.setCollisionByExclusion(-1, true);
 this.player = this.physics.add.sprite(110, 145, 'player');//this says where he will be placed
 this.player.setBounce(0.1);
 this.player.setCollideWorldBounds(true);
