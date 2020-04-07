@@ -2,8 +2,10 @@
 const config = {
   type: Phaser.AUTO,
   parent: 'game',
+  width:1500,
+  height:1500,
   scale: {
-    mode: Phaser.Scale.FIT,
+    mode: Phaser.Scale.resize,
     autoCenter: Phaser.Scale.CENTER_BOTH
   },
   scene: {
@@ -37,7 +39,7 @@ function create()
 const map = this.make.tilemap({ key: 'map' });
 const tileset = map.addTilesetImage('kenney_simple_platformer', 'tiles');
 const platforms = map.createStaticLayer('Platforms', tileset, 0, 0);
-//platforms.setCollisionByExclusion(-1, true);
+platforms.setCollisionByExclusion(-1, true);
 this.player = this.physics.add.sprite(110, 145, 'player');//this says where he will be placed
 this.player.setBounce(0.1);
 this.player.setCollideWorldBounds(true);
