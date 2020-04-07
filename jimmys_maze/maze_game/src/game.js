@@ -2,8 +2,10 @@
 const config = {
   type: Phaser.AUTO,
   parent: 'game',
+  width:1500,
+  height:1500,
   scale: {
-    mode: Phaser.Scale.FIT,
+    mode: Phaser.Scale.resize,
     autoCenter: Phaser.Scale.CENTER_BOTH
   },
   scene: {
