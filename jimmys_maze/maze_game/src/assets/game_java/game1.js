@@ -26,11 +26,11 @@ const game = new Phaser.Game(config);
 localStorage.clear();
 
 function preload() {
-  this.load.image('background', '../../../maze_game/src/assets/images/background.png');
-  this.load.image('spike', '../../../maze_game/src/assets/images/spike.png');
-  this.load.atlas('player', '../../../maze_game/src/assets/images/kenney_player.png','../../../maze_game/src/assets/images/kenney_player_atlas.json');
-  this.load.image('tiles', '../../../maze_game/src/assets/tilesets/platformPack_tilesheet.png');
-  this.load.tilemapTiledJSON('map', '../../../maze_game/src/assets/tilemaps/maze_level1.json');
+  this.load.image('background', '../images/background.png');
+  this.load.image('spike', '../images/spike.png');
+  this.load.atlas('player', '../images/kenney_player.png','../images/kenney_player_atlas.json');
+  this.load.image('tiles', '../tilesets/platformPack_tilesheet.png');
+  this.load.tilemapTiledJSON('map', '../tilemaps/maze_level2.json');
 
 }
 
@@ -97,8 +97,9 @@ this.physics.add.collider(this.player, this.spikes, playerHit, null, this);
 // or the 'UP' arrow
 
 function playerHit(player, spike) {
-window.location.pathname = "maze_game/src/assets/maze_levels/maze1.php";
-}
+
+  };
+
 function update() {
   if (this.cursors.left.isDown) {
     this.player.setVelocityX(-200);
