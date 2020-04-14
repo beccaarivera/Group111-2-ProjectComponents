@@ -4,6 +4,8 @@ const config = {
   parent: 'game',
   scale: {
     mode: Phaser.Scale.FIT,
+    height: 2500,
+    width: 2500,
     autoCenter: Phaser.Scale.CENTER_BOTH
   },
   scene: {
@@ -112,6 +114,7 @@ function update() {
   if (this.cursors.left.isDown) {
     this.player.setVelocityX(-200);
     this.player.play('walk', true);
+
   }
   else if (this.cursors.right.isDown) {
     this.player.setVelocityX(200);
@@ -130,6 +133,7 @@ function update() {
     this.player.play('walk', false);
     this.player.play('idle', true);
   }
+
 
 
   // Player can jump while walking any direction by pressing the space bar
