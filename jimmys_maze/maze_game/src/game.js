@@ -30,7 +30,12 @@ function preload() {
   this.load.image('spike', '../../../maze_game/src/assets/images/spike.png');
   this.load.atlas('player', '../../../maze_game/src/assets/images/kenney_player.png','../../../maze_game/src/assets/images/kenney_player_atlas.json');
   this.load.image('tiles', '../../../maze_game/src/assets/tilesets/platformPack_tilesheet.png');
-  this.load.tilemapTiledJSON('map', '../../../maze_game/src/assets/tilemaps/maze_level1.json');
+  
+  if(jsonLevel == null){
+	  
+  }
+  
+  this.load.tilemapTiledJSON('map', '../../../maze_game/src/assets/tilemaps/' +jsonLevel);
 
 }
 
@@ -97,7 +102,28 @@ this.physics.add.collider(this.player, this.spikes, playerHit, null, this);
 // or the 'UP' arrow
 
 function playerHit(player, spike) {
-window.location.pathname = "maze_game/src/assets/maze_levels/maze1.php";
+    
+    var totalTime = 50;//endTime - startTime;
+	$(document).ready(function($){
+                var resp = $("#response");
+                $.ajax({
+                    type: "POST",
+                    url: "/private_php/connect/levelComplete.php", 
+                    data: {time_taken: totalTime, level_number: levelNumber },
+
+                    beforeSend: function(xhr){
+                        resp.html("Please wait...");
+                    },
+                    error: function(qXHR, textStatus, errorThrow){
+                        resp.html("There are an error");
+                    },
+
+                    success: function(data, textStatus, jqXHR){
+                        window.location.href = "/public_html/pages/level-completed?level_number="+levelNumber + "&time_taken="+totalTime;
+                    }
+                });
+            });
+	//window.location.reload();
 }
 function update() {
   if (this.cursors.left.isDown) {

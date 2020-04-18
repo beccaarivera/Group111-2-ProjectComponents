@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 require 'connect.php';
 
 $post_username = $con ->escape_string($_POST['username']);
@@ -22,6 +20,7 @@ if ( $result->num_rows == 0 ){ // User doesn't exist
         $_SESSION['time_registered'] = $user['time_registered'];
         $_SESSION['username'] = $user['username'];
         $_SESSION['user_uuid'] = $user['uuid'];
+        $_SESSION['current_level'] = $user['current_level'];
         
         // This is how we'll know the user is logged in
         $_SESSION['logged_in'] = TRUE;
