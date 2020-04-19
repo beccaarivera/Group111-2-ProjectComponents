@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+
+if(!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']){
+	echo '<script>
+	alert("You are not logged in...");
+	document.location = "../../pages/login";
+	</script>';
+}
 ?>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -22,7 +30,7 @@ session_start();
       h2 {
         color: #e84855;
         text-align: left;
-        font-size 70px;
+        font-size:70px;
         text-shadow: 0px 5px 12px rgba(0,0,0, .35);
       }
       .name{
