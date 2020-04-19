@@ -42,8 +42,8 @@ if ($result = $con->query("SELECT uuid FROM users WHERE username = '$post_userna
 		if ($result = $con->query("INSERT INTO users (uuid, username, password) VALUES (uuid(), '$post_username', '$hash_password')")) {
 			// We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
 			
-			$_SESSION['register_error'] = 'You have been successfully registered!';
-			header("Location: /public_html/pages/register");
+			$_SESSION['login_error'] = 'You have been successfully registered as '.$post_username.'!';
+			header("Location: /public_html/pages/login");
 		} else {
 			// Something is wrong with the sql statement, check to make sure accounts table exists with all 3 fields.
 			echo 'Could not prepare statement!2';
