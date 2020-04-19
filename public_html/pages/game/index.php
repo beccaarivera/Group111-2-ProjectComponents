@@ -104,10 +104,10 @@ if(!isset($_SESSION['logged_in']) && !$_SESSION['logged_in']){
                         if (substr($file, $len - 5, $len) != '.json') {
                             continue;
                         }
-                        if($i > $_SESSION['current_level']){
+                        if ($i > $_SESSION['current_level']) {
                             echo '<button type="button" class="btn btn-outline-danger" style="color:gray;" onclick="alert(\'You may not play a level you have not reached!\')">Level ' . $i . '</button>';
-                        }else{
-                        echo '<button type="button" class="btn btn-outline-danger"  onclick="selectLevel(\'' . $file . '\', '.$i.');">Level ' . $i . '</button>';
+                        } else {
+                            echo '<button type="button" class="btn btn-outline-danger"  onclick="selectLevel(\'' . $file . '\', ' . $i . ');">Level ' . $i . '</button>';
                         }
                         $i++;
                     }
