@@ -41,7 +41,7 @@ session_start();
 		<body>
 		<?php require_once '../../res/elements/navbar.php'; ?>
 			<div class="container" >
-				<h1>Jimmy's Maze!</h1>
+				<h1>About Jimmy's Maze!</h1>
 				<p class="jumbotron"> HELLO! Welcome to Jimmy's Maze! This game is all about trying to solve as many mazes as you possibly can and have fun along the way. The arrow keys are what move your character through the maze. Good Luck! </p>
 			</div>
 		</body>

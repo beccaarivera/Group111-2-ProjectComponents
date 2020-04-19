@@ -30,6 +30,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
         }
         .container {
             margin-top :50px;
+            padding:30px;
         }
 
         .table{
