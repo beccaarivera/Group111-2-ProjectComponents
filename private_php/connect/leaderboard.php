@@ -1,42 +1,4 @@
-<!--<table class="table table-bordered" id="child">
-	<thead>
-		<tr>
-			<th>Rank</th>
-			<th>Username</th>
-			<th>Levels Completed</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>#1</td>
-			<td/>
-			<td/>
-		</tr>
-		<tr>
-			<td>#2</td>
-			<td/>
-			<td/>
-		</tr>
-		<tr>
-			<td>#3</td>
-			<td/>
-			<td/>
-		</tr>
-		<tr>
-			<td>#4</td>
-			<td/>
-			<td/>
 
-		</tr>
-		<tr>
-			<td>#5</td>
-			<td/>
-			<td/>
-
-		</tr>
-	</tbody>
-</table>
--->
 
 <?php
 session_start();
