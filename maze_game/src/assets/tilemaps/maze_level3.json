@@ -1,4 +1,12 @@
 { "compressionlevel":-1,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"json",
+         "target":"..\/..\/Documents\/GitHub\/Group111-2-ProjectComponents\/maze_game\/src\/assets\/tilemaps\/maze_level3.json"
+        }
+    },
  "height":23,
  "infinite":false,
  "layers":[
@@ -30,8 +38,8 @@
                  "type":"",
                  "visible":true,
                  "width":64,
-                 "x":64.5,
-                 "y":1472
+                 "x":58.2183499288762,
+                 "y":1254.23613086771
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -49,7 +57,7 @@
         {
          "columns":14,
          "firstgid":1,
-         "image":"..\/tilesets\/platformPack_tilesheet.png",
+         "image":"..\/..\/Documents\/GitHub\/Group111-2-ProjectComponents\/maze_game\/src\/assets\/tilesets\/platformPack_tilesheet.png",
          "imageheight":448,
          "imagewidth":896,
          "margin":0,

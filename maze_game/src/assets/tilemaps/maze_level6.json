@@ -4,7 +4,7 @@
      "export":
         {
          "format":"json",
-         "target":"maze_level6.json"
+         "target":"..\/..\/Documents\/GitHub\/Group111-2-ProjectComponents\/maze_game\/src\/assets\/tilemaps\/maze_level6.json"
         }
     },
  "height":35,
@@ -39,7 +39,7 @@
                  "visible":true,
                  "width":64,
                  "x":0,
-                 "y":2176
+                 "y":1956.14224751067
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -57,7 +57,7 @@
         {
          "columns":14,
          "firstgid":1,
-         "image":"..\/tilesets\/platformPack_tilesheet.png",
+         "image":"..\/..\/Documents\/GitHub\/Group111-2-ProjectComponents\/maze_game\/src\/assets\/tilesets\/platformPack_tilesheet.png",
          "imageheight":448,
          "imagewidth":896,
          "margin":0,
