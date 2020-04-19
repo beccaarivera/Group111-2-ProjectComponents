@@ -16,7 +16,7 @@
         {
             "filename": "robo_player_1",
             "frame": {
-                "x": 62,
+                "x": 0,
                 "y": 0,
                 "w": 62,
                 "h": 62
@@ -29,7 +29,7 @@
         {
             "filename": "robo_player_2",
             "frame": {
-                "x": 124,
+                "x": 0,
                 "y": 0,
                 "w": 62,
                 "h": 62
@@ -42,7 +42,7 @@
         {
             "filename": "robo_player_3",
             "frame": {
-                "x": 186,
+                "x": 0,
                 "y": 0,
                 "w": 62,
                 "h": 62
@@ -56,7 +56,7 @@
             "filename": "robo_player_4",
             "frame": {
                 "x": 0,
-                "y": 62,
+                "y": 0,
                 "w": 62,
                 "h": 62
             },
@@ -68,8 +68,8 @@
         {
             "filename": "robo_player_5",
             "frame": {
-                "x": 62,
-                "y": 62,
+                "x": 0,
+                "y": 0,
                 "w": 62,
                 "h": 62
             },
@@ -81,8 +81,8 @@
         {
             "filename": "robo_player_6",
             "frame": {
-                "x": 124,
-                "y": 62,
+                "x": 0,
+                "y": 0,
                 "w": 62,
                 "h": 62
             },
@@ -94,8 +94,8 @@
         {
             "filename": "robo_player_7",
             "frame": {
-                "x": 186,
-                "y": 62,
+                "x": 0,
+                "y": 0,
                 "w": 62,
                 "h": 62
             },

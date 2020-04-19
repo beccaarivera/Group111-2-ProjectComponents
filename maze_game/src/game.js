@@ -128,24 +128,19 @@ function playerHit(player, spike) {
 function update() {
   if (this.cursors.left.isDown) {
     this.player.setVelocityX(-200);
-    this.player.play('walk', true);
 
   }
   else if (this.cursors.right.isDown) {
     this.player.setVelocityX(200);
-    this.player.play('walk', true);
   }
   else if (this.cursors.down.isDown) {
     this.player.setVelocityY(200);
-    this.player.play('walk', true);
   }
   else if (this.cursors.up.isDown){
     this.player.setVelocityY(-200);
-    this.player.play('walk', true);
   }
   else{
     this.player.setVelocity(0);
-    this.player.play('walk', false);
     this.player.play('idle', true);
   }
 
