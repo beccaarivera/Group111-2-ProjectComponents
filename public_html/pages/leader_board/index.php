@@ -19,8 +19,8 @@ session_start();
 			height:50px;
 			text-shadow: 0px 5px 12px rgba(0,0,0, .35);
 		}
-		td{color:#e84855;}
-		th{color:#e84855;}
+		td{color:#e84855; text-align:center;}
+		th{color:#e84855; text-align:center;}
 		#bit{font-size:80px}
 		#parent {position: relative;}
 
@@ -38,72 +38,77 @@ session_start();
 	</head>
 	<body>
 		<?php require_once '../../res/elements/navbar.php'; ?>
+
+		<form action="/private_php/connect/leaderboard.php" method="post">
+			<select id="level_select" name="level_selector" onchange="this.form.submit()">
+			  <option value="0">Select a Level</option>
+			  <option value="1">Level 1</option>
+			  <option value="2">Level 2</option>
+			  <option value="3">Level 3</option>
+			  <option value="4">Level 4</option>
+			  <option value="5">Level 5</option>
+			  <option value="6">Level 6</option>
+			</select>
+		</form>
+
 		<h1>Jimmy's Maze!</h1>
 		<div class="container" id="parent">
 			<table class="table table-bordered" id="child">
 				<thead>
 					<tr>
+						<th colspan="3">
+							<?php 
+							if(isset($_SESSION["selected_level"])){
+								ECHO 'Level '.$_SESSION["selected_level"]; 
+							}
+							else{
+								ECHO 'Level not selected';
+							}
+							?>
+						</th>
+					</tr>
+					<tr>
 						<th>Rank</th>
 						<th>Username</th>
-						<th>Levels Completed</th>
+						<th>Time taken to complete</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td>#1</td>
-						<td/>
-						<td/>
+						<td>
+							<?php ECHO $_SESSION["bestplayer1"]; ?>
+						<td>
+							<?php ECHO $_SESSION["time1"]; ?>
 					</tr>
 					<tr>
 						<td>#2</td>
-						<td/>
-						<td/>
+						<td>
+							<?php ECHO $_SESSION["bestplayer2"]; ?>
+						<td>
+							<?php ECHO $_SESSION["time2"]; ?>
 					</tr>
 					<tr>
 						<td>#3</td>
-						<td/>
-						<td/>
+						<td>
+							<?php ECHO $_SESSION["bestplayer3"]; ?>
+						<td>
+							<?php ECHO $_SESSION["time3"]; ?>
 					</tr>
 					<tr>
 						<td>#4</td>
-						<td/>
-						<td/>
+						<td>
+							<?php ECHO $_SESSION["bestplayer4"]; ?>
+						<td>
+							<?php ECHO $_SESSION["time4"]; ?>
 
 					</tr>
 					<tr>
 						<td>#5</td>
-						<td/>
-						<td/>
-
-					</tr>
-					<tr>
-						<td>#6</td>
-						<td/>
-						<td/>
-
-					</tr>
-					<tr>
-						<td>#7</td>
-						<td/>
-						<td/>
-
-					</tr>
-					<tr>
-						<td>#8</td>
-						<td/>
-						<td/>
-
-					</tr>
-					<tr>
-						<td>#9</td>
-						<td/>
-						<td/>
-
-					</tr>
-					<tr>
-						<td>#10</td>
-						<td/>
-						<td/>
+						<td>
+							<?php ECHO $_SESSION["bestplayer5"]; ?>
+						<td>
+							<?php ECHO $_SESSION["time5"]; ?>
 
 					</tr>
 				</tbody>

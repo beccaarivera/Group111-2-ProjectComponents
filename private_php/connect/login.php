@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'connect.php';
 
 $post_username = $con ->escape_string($_POST['username']);
