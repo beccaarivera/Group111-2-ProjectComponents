@@ -51,7 +51,12 @@ session_start();
 				<div class="btn-group-vertical" >
 					<button type="button" class="btn btn-outline-danger"  id="score" onclick="window.location.href = 'pages/leader_board'">Check Leaderboard</button>
 					<button type="button" class="btn btn-outline-danger" id="about"onclick="window.location.href = 'pages/about'">About</button>
-					<button type="button" class="btn btn-outline-danger" id="start" onclick="window.location.href = 'pages/game'">Start Game</button>
+					<?php 
+                                        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] ){
+                                            echo '<button type="button" class="btn btn-outline-danger" onclick="window.location.href = \'pages/user_profile\'">Profile</button>';
+                                        }
+                                        ?>
+                                        <button type="button" class="btn btn-outline-danger" id="start" onclick="window.location.href = 'pages/game'">Start Game</button>
 
 				</div>
 			</div>

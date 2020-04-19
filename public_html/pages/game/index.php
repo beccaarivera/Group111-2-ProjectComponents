@@ -4,6 +4,7 @@
 session_start();
 
 if(!isset($_SESSION['logged_in']) && !$_SESSION['logged_in']){
+    $_SESSION['login_error'] = 'You must be logged in to play the game!';
     header('Location: ../../pages/login');
 }
 ?>
