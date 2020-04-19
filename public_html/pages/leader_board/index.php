@@ -77,38 +77,78 @@ session_start();
 					<tr>
 						<td>#1</td>
 						<td>
-							<?php ECHO $_SESSION["bestplayer1"]; ?>
+							<?php 
+							if(isset($_SESSION["bestplayer1"])){
+								ECHO $_SESSION["bestplayer1"]; 
+							}
+							?>
 						<td>
-							<?php ECHO $_SESSION["time1"]; ?>
+							<?php 
+							if(isset($_SESSION["time1"])){
+								ECHO $_SESSION["time1"];
+							}
+							?>
 					</tr>
 					<tr>
 						<td>#2</td>
 						<td>
-							<?php ECHO $_SESSION["bestplayer2"]; ?>
+							<?php 
+							if(isset($_SESSION["bestplayer2"])){
+								ECHO $_SESSION["bestplayer2"]; 
+							}
+							?>
 						<td>
-							<?php ECHO $_SESSION["time2"]; ?>
+							<?php 
+							if(isset($_SESSION["time2"])){
+								ECHO $_SESSION["time2"];
+							}
+							?>
 					</tr>
 					<tr>
 						<td>#3</td>
 						<td>
-							<?php ECHO $_SESSION["bestplayer3"]; ?>
+							<?php 
+							if(isset($_SESSION["bestplayer3"])){
+								ECHO $_SESSION["bestplayer3"]; 
+							}
+							?>
 						<td>
-							<?php ECHO $_SESSION["time3"]; ?>
+							<?php 
+							if(isset($_SESSION["time3"])){
+								ECHO $_SESSION["time3"];
+							}
+							?>
 					</tr>
 					<tr>
 						<td>#4</td>
 						<td>
-							<?php ECHO $_SESSION["bestplayer4"]; ?>
+							<?php 
+							if(isset($_SESSION["bestplayer4"])){
+								ECHO $_SESSION["bestplayer4"]; 
+							}
+							?>
 						<td>
-							<?php ECHO $_SESSION["time4"]; ?>
+							<?php 
+							if(isset($_SESSION["time4"])){
+								ECHO $_SESSION["time4"];
+							}
+							?>
 
 					</tr>
 					<tr>
 						<td>#5</td>
 						<td>
-							<?php ECHO $_SESSION["bestplayer5"]; ?>
+							<?php 
+							if(isset($_SESSION["bestplayer5"])){
+								ECHO $_SESSION["bestplayer5"]; 
+							}
+							?>
 						<td>
-							<?php ECHO $_SESSION["time5"]; ?>
+							<?php 
+							if(isset($_SESSION["time5"])){
+								ECHO $_SESSION["time5"];
+							}
+							?>
 
 					</tr>
 				</tbody>
