@@ -17,13 +17,14 @@ const config = {
     default: 'arcade',
     arcade: {
       gravity: { n: 500 },
-      debug: true,
+      debug: false,
     },
   }
 };
 
 const game = new Phaser.Game(config);
 localStorage.clear();
+
 
 function preload() {
   this.load.image('background', '../../../maze_game/src/assets/images/background.png');
@@ -39,6 +40,7 @@ function preload() {
 
 }
 
+var timeText = 0;
 function create()
 {
 
@@ -95,15 +97,25 @@ spikeObjects.forEach(spikeObject => {
   spike.body.setSize(spike.width, spike.height - 20).setOffset(0, 20);
 });
 this.physics.add.collider(this.player, this.spikes, playerHit, null, this);
+timeText = this.add.text(10, 10, '', { font: '32px Arial', fill: '#00ff00' });
 }
 
+var velX = 0;
+var velY = 0;
+var acc = 10;
+var max = 200;
+var startTime = 0;
 
 // Player can jump while walking any direction by pressing the space bar
 // or the 'UP' arrow
-
+var finished = false;
 function playerHit(player, spike) {
-
-    var totalTime = 50;//endTime - startTime;
+    if(finished){
+        return;
+    }else{
+        finished = true;
+    }
+    var totalTime = ((new Date()).getTime()- startTime)/1000;
 	$(document).ready(function($){
                 var resp = $("#response");
                 $.ajax({
@@ -126,23 +138,39 @@ function playerHit(player, spike) {
 	//window.location.reload();
 }
 function update() {
+  if(!this.cursors.up.isDown && !this.cursors.left.isDown && !this.cursors.right.isDown && !this.cursors.down.isDown){
+    velX*=.9;
+    velY*=.9;
+    //this.player.play('idle', true);
+  }else if (startTime==0){
+      startTime = (new Date()).getTime();
+  }
+  if(startTime == 0){
+    timeText.setText("TIME : " + 0 + " Seconds (move to start)");
+  }else{
+    timeText.setText("TIME : " + ((new Date()).getTime()- startTime)/1000 + " Seconds");
+  }
   if (this.cursors.left.isDown) {
-    this.player.setVelocityX(-200);
-
+    velX-=acc;
   }
-  else if (this.cursors.right.isDown) {
-    this.player.setVelocityX(200);
+  if (this.cursors.right.isDown) {
+    velX+=acc;
   }
-  else if (this.cursors.down.isDown) {
-    this.player.setVelocityY(200);
+ if (this.cursors.down.isDown) {
+    velY+=acc;
   }
-  else if (this.cursors.up.isDown){
-    this.player.setVelocityY(-200);
+ if (this.cursors.up.isDown){
+    velY-=acc;
   }
-  else{
-    this.player.setVelocity(0);
-    this.player.play('idle', true);
+  if( Math.sqrt(velX*velX + velY*velY) > max){
+      var vel = Math.sqrt(velX*velX + velY*velY);
+      
+      velX = velX * (max/vel);
+      velY = velY * (max/vel);
   }
+  
+    this.player.setVelocityX(velX);
+    this.player.setVelocityY(velY);
 
 
 

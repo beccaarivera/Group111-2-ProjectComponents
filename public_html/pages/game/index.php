@@ -90,7 +90,7 @@ if(!isset($_SESSION['logged_in']) && !$_SESSION['logged_in']){
                 $.getScript("/maze_game/src/game.js");
             }
         </script>
-
+        <span id="response" ></span>
 
         <div id="level-selector">
             <h1 >Jimmy's maze!</h1>

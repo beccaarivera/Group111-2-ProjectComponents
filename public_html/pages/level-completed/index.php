@@ -31,20 +31,20 @@ if(!isset($_SESSION['logged_in']) && !$_SESSION['logged_in']){
         <style>
             
 
-            h1 {color:#e84855;}
-           h1{
+            .jumbotron h1 {color:#e84855;}
+           .jumbotron h1{
                 font-size:50px;
                 text-align:center;
                 padding:15px;
                 text-shadow: 0px 5px 12px rgba(0,0,0, .35);
             }
-            h6{
+            .jumbotron h6{
                 font-size:30px;
                 margin:50px;
                 text-align:left;
             }
 
-            .jumbotron{
+            .jumbotron {
                 padding:20px;
                 width:50%;
                 margin:50px;
@@ -64,7 +64,7 @@ if(!isset($_SESSION['logged_in']) && !$_SESSION['logged_in']){
             
             <h1> You completed the level!</h1>
             <h6> Level : <?php echo $_GET['level_number']; ?> </h6>
-            <h6> Time Taken :  <?php echo $_GET['time_taken']; ?></h6>
+            <h6> Time Taken :  <?php echo $_GET['time_taken']; ?> Seconds!</h6>
             <a type="button" id="return" class="btn btn-lg btn-primary"  href="/public_html/pages/game" >Return</a>
             </div>
             </body>

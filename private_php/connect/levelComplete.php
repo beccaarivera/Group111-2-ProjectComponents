@@ -21,5 +21,10 @@ if ($_SESSION['current_level'] == $post_level) {
     } else {
         echo 'Could not prepare statement!2';
     }
+    
 }
+    if ($result = $con->query("INSERT INTO `user_scores` ( `user_uuid`, `username`, `time_taken`, `level_number`) VALUES ( '".$_SESSION['user_uuid']."', '".$_SESSION['username']."', SEC_TO_TIME(".$post_time."), '".$post_level."')")) {
 
+    } else {
+        echo 'Could not prepare statement!2';
+    }
