@@ -87,7 +87,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
             <h2>
                 <?php ECHO $_SESSION["username"]; ?>
             </h2>
-            <img id="user_img" src="http://jimmysmaze/public_html/res/img/profile.png" >
+            <img id="user_img" src="/public_html/res/img/profile.png" >
         </div>
         <div style="float:right;">
             <table id="attepts" class="table">
