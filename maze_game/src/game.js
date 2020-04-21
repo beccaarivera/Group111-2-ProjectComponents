@@ -30,11 +30,11 @@ function preload() {
   this.load.image('spike', '../../../maze_game/src/assets/images/spike.png');
   this.load.atlas('player', '../../../maze_game/src/assets/images/kenney_player.png','../../../maze_game/src/assets/images/kenney_player_atlas.json');
   this.load.image('tiles', '../../../maze_game/src/assets/tilesets/platformPack_tilesheet.png');
-  
+
   if(jsonLevel == null){
-	  
+
   }
-  
+
   this.load.tilemapTiledJSON('map', '../../../maze_game/src/assets/tilemaps/' +jsonLevel);
 
 }
@@ -46,7 +46,7 @@ const map = this.make.tilemap({ key: 'map' });
 const tileset = map.addTilesetImage('kenney_simple_platformer', 'tiles');
 const platforms = map.createStaticLayer('Platforms', tileset, 0, 0);
 platforms.setCollisionByExclusion(-1, true);
-this.player = this.physics.add.sprite(110, 145, 'player');//this says where he will be placed
+this.player = this.physics.add.sprite(90, 98, 'player');//this says where he will be placed
 this.player.setBounce(0.1);
 this.player.setCollideWorldBounds(true);
 this.physics.add.collider(this.player, platforms);
@@ -102,13 +102,13 @@ this.physics.add.collider(this.player, this.spikes, playerHit, null, this);
 // or the 'UP' arrow
 
 function playerHit(player, spike) {
-    
+
     var totalTime = 50;//endTime - startTime;
 	$(document).ready(function($){
                 var resp = $("#response");
                 $.ajax({
                     type: "POST",
-                    url: "/private_php/connect/levelComplete.php", 
+                    url: "/private_php/connect/levelComplete.php",
                     data: {time_taken: totalTime, level_number: levelNumber },
 
                     beforeSend: function(xhr){
