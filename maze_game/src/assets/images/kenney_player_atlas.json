@@ -1,0 +1,165 @@
+{
+    "frames": [
+        {
+            "filename": "robo_player_0",
+            "frame": {
+                "x": 0,
+                "y": 0,
+<<<<<<< HEAD:maze_game/src/assets/images/kenney_player_atlas.json
+                "w": 62,
+                "h": 62
+=======
+                "w": 96,
+                "h": 96
+>>>>>>> master:jimmys_maze/maze_game/src/assets/images/kenney_player_atlas.json
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "robo_player_1",
+            "frame": {
+<<<<<<< HEAD:maze_game/src/assets/images/kenney_player_atlas.json
+                "x": 0,
+                "y": 0,
+                "w": 62,
+                "h": 62
+=======
+                "x": 96,
+                "y": 0,
+                "w": 96,
+                "h": 96
+>>>>>>> master:jimmys_maze/maze_game/src/assets/images/kenney_player_atlas.json
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "robo_player_2",
+            "frame": {
+<<<<<<< HEAD:maze_game/src/assets/images/kenney_player_atlas.json
+                "x": 0,
+                "y": 0,
+                "w": 62,
+                "h": 62
+=======
+                "x": 192,
+                "y": 0,
+                "w": 96,
+                "h": 96
+>>>>>>> master:jimmys_maze/maze_game/src/assets/images/kenney_player_atlas.json
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "robo_player_3",
+            "frame": {
+<<<<<<< HEAD:maze_game/src/assets/images/kenney_player_atlas.json
+                "x": 0,
+                "y": 0,
+                "w": 62,
+                "h": 62
+=======
+                "x": 288,
+                "y": 0,
+                "w": 96,
+                "h": 96
+>>>>>>> master:jimmys_maze/maze_game/src/assets/images/kenney_player_atlas.json
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "robo_player_4",
+            "frame": {
+                "x": 0,
+<<<<<<< HEAD:maze_game/src/assets/images/kenney_player_atlas.json
+                "y": 0,
+                "w": 62,
+                "h": 62
+=======
+                "y": 96,
+                "w": 96,
+                "h": 96
+>>>>>>> master:jimmys_maze/maze_game/src/assets/images/kenney_player_atlas.json
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "robo_player_5",
+            "frame": {
+<<<<<<< HEAD:maze_game/src/assets/images/kenney_player_atlas.json
+                "x": 0,
+                "y": 0,
+                "w": 62,
+                "h": 62
+=======
+                "x": 96,
+                "y": 96,
+                "w": 96,
+                "h": 96
+>>>>>>> master:jimmys_maze/maze_game/src/assets/images/kenney_player_atlas.json
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "robo_player_6",
+            "frame": {
+<<<<<<< HEAD:maze_game/src/assets/images/kenney_player_atlas.json
+                "x": 0,
+                "y": 0,
+                "w": 62,
+                "h": 62
+=======
+                "x": 192,
+                "y": 96,
+                "w": 96,
+                "h": 96
+>>>>>>> master:jimmys_maze/maze_game/src/assets/images/kenney_player_atlas.json
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "robo_player_7",
+            "frame": {
+<<<<<<< HEAD:maze_game/src/assets/images/kenney_player_atlas.json
+                "x": 0,
+                "y": 0,
+                "w": 62,
+                "h": 62
+=======
+                "x": 288,
+                "y": 96,
+                "w": 96,
+                "h": 96
+>>>>>>> master:jimmys_maze/maze_game/src/assets/images/kenney_player_atlas.json
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        }
+    ],
+    "meta": {
+        "description": "Atlas generado con Atlas Packer Phaser3",
+        "web": "https://gammafp.github.io/atlas-packer-phaser/"
+    }
+}
