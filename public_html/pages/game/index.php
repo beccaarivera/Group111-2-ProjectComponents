@@ -29,6 +29,7 @@ if(!isset($_SESSION['logged_in']) && !$_SESSION['logged_in']){
             }
 
             #game {
+				
                 margin: 10px auto;
                 padding: 0;
             }
@@ -87,6 +88,7 @@ if(!isset($_SESSION['logged_in']) && !$_SESSION['logged_in']){
                 $("#level-selector").remove();
                 levelNumber = i;
                 jsonLevel = v;
+				$("#game").height( "80%");
                 $.getScript("/maze_game/src/game.js");
             }
         </script>
