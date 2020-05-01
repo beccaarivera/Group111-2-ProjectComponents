@@ -26,7 +26,7 @@ if ( $result->num_rows == 0 ){ // User doesn't exist
         // This is how we'll know the user is logged in
         $_SESSION['logged_in'] = TRUE;
 		
-		header("Location: /private_php/connect/userProfile.php");
+		header("Location: /public_html/pages/user_profile");
         
     }else {
         $_SESSION['logged_in'] = FALSE;
