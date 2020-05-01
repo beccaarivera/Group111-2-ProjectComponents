@@ -32,4 +32,5 @@ html {
 }
 
 body{
+	height:100%;
 background: linear-gradient(0deg, rgba(30,39,48,1) 0%, rgba(74,46,56,1) 94%, rgba(232,72,85,1) 100%);}

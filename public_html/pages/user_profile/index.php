@@ -98,36 +98,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
                     <th> Level # </th>
                     <th> Best time </th>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <?php ECHO $_SESSION["current_user_time_level1"]; ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>
-                        <?php ECHO $_SESSION["current_user_time_level2"]; ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>
-                        <?php ECHO $_SESSION["current_user_time_level3"]; ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>
-                        <?php ECHO $_SESSION["current_user_time_level4"]; ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>
-                        <?php ECHO $_SESSION["current_user_time_level5"]; ?>
-                    </td>
-                </tr>
+<?php require '../../../private_php/connect/userProfile.php'; ?>
             </table>
         </div>
     </div>

@@ -23,21 +23,14 @@ const config = {
 };
 
 const game = new Phaser.Game(config);
+localStorage.clear();
 
 function preload() {
-<<<<<<< HEAD:maze_game/src/assets/game_java/game1.js
   this.load.image('background', '../images/background.png');
   this.load.image('spike', '../images/spike.png');
   this.load.atlas('player', '../images/kenney_player.png','../images/kenney_player_atlas.json');
   this.load.image('tiles', '../tilesets/platformPack_tilesheet.png');
   this.load.tilemapTiledJSON('map', '../tilemaps/maze_level2.json');
-=======
-  this.load.image('background', '../../../maze_game/src/assets/images/background.png');
-  this.load.image('spike', '../../../maze_game/src/assets/images/spike.png');
-  this.load.atlas('player', '../../../maze_game/src/assets/images/kenney_player.png','../../../maze_game/src/assets/images/kenney_player_atlas.json');
-  this.load.image('tiles', '../../../maze_game/src/assets/tilesets/platformPack_tilesheet.png');
-  this.load.tilemapTiledJSON('map', '../../../maze_game/src/assets/tilemaps/mazelevel1.json');
->>>>>>> master:jimmys_maze/maze_game/src/game.js
 
 }
 

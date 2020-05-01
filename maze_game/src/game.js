@@ -4,8 +4,8 @@ const config = {
   parent: 'game',
   scale: {
     mode: Phaser.Scale.FIT,
-    height: 750 + levelNumber*250,
-    width: 750 + levelNumber*250,
+    height: 725 + levelNumber*250,
+    width: 725 + levelNumber*250,
     autoCenter: Phaser.Scale.CENTER_BOTH
   },
   scene: {

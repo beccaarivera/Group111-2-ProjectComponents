@@ -26,7 +26,7 @@
         {
          "draworder":"topdown",
          "id":2,
-         "name":"Door",
+         "name":"Spikes",
          "objects":[
                 {
                  "gid":76,
@@ -37,13 +37,8 @@
                  "type":"",
                  "visible":true,
                  "width":64,
-<<<<<<< HEAD:maze_game/src/assets/tilemaps/maze_level1.json
                  "x":64.6344238975818,
                  "y":747.604551920341
-=======
-                 "x":66,
-                 "y":962
->>>>>>> master:jimmys_maze/maze_game/src/assets/tilemaps/maze_level1.json
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -61,11 +56,7 @@
         {
          "columns":14,
          "firstgid":1,
-<<<<<<< HEAD:maze_game/src/assets/tilemaps/maze_level1.json
          "image":"..\/..\/Documents\/GitHub\/Group111-2-ProjectComponents\/maze_game\/src\/assets\/tilesets\/platformPack_tilesheet.png",
-=======
-         "image":"..\/tilesets\/platformPack_tilesheet.png",
->>>>>>> master:jimmys_maze/maze_game/src/assets/tilemaps/maze_level1.json
          "imageheight":448,
          "imagewidth":896,
          "margin":0,
