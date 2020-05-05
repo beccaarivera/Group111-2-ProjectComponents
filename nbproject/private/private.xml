@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Knaxel/Documents/GitHub/Group111-2-ProjectComponents/public_html/pages/leader_board/index.php</file>
+            <file>file:/C:/Users/Knaxel/Documents/GitHub/Group111-2-ProjectComponents/private_php/connect/leaderboard.php</file>
+            <file>file:/C:/Users/Knaxel/Documents/GitHub/Group111-2-ProjectComponents/private_php/connect/login.php</file>
+            <file>file:/C:/Users/Knaxel/Documents/GitHub/Group111-2-ProjectComponents/private_php/connect/userProfile.php</file>
+            <file>file:/C:/Users/Knaxel/Documents/GitHub/Group111-2-ProjectComponents/public_html/res/elements/navbar.php</file>
+            <file>file:/C:/Users/Knaxel/Documents/GitHub/Group111-2-ProjectComponents/public_html/pages/level-completed/index.php</file>
+            <file>file:/C:/Users/Knaxel/Documents/GitHub/Group111-2-ProjectComponents/public_html/pages/user_profile/index.php</file>
+            <file>file:/C:/Users/Knaxel/Documents/GitHub/Group111-2-ProjectComponents/private_php/connect/db.php</file>
+        </group>
     </open-files>
 </project-private>

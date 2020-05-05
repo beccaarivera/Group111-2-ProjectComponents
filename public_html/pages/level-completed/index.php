@@ -1,11 +1,10 @@
-
 <?php
 session_start();
 
-if(!isset($_SESSION['logged_in']) && !$_SESSION['logged_in']){
+if(!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']){
 	echo '<script>
 	alert("You are not logged in...");
-	document.location = "../../";
+	document.location = "/";
 	</script>';
 }
 ?>
@@ -65,7 +64,7 @@ if(!isset($_SESSION['logged_in']) && !$_SESSION['logged_in']){
             <h1> You completed the level!</h1>
             <h6> Level : <?php echo $_GET['level_number']; ?> </h6>
             <h6> Time Taken :  <?php echo $_GET['time_taken']; ?> Seconds!</h6>
-            <a type="button" id="return" class="btn btn-lg btn-primary"  href="/public_html/pages/game" >Return</a>
+            <a type="button" id="return" class="btn btn-lg btn-primary"  href="/pages/game" >Return</a>
             </div>
             </body>
 </html>

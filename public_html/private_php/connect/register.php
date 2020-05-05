@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 require 'connect.php';
@@ -34,7 +33,7 @@ if ($result = $con->query("SELECT uuid FROM users WHERE username = '$post_userna
 	if ($result->num_rows > 0) {
 		// Username already exists
 		$_SESSION['register_error'] = 'That username already exists...';
-		header("Location: /public_html/pages/register");
+		header("Location: /pages/register");
 	} else {
 		
 		$hash_password = password_hash($post_password, PASSWORD_DEFAULT);
@@ -43,7 +42,7 @@ if ($result = $con->query("SELECT uuid FROM users WHERE username = '$post_userna
 			// We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
 			
 			$_SESSION['login_error'] = 'You have been successfully registered as '.$post_username.'!';
-			header("Location: /public_html/pages/login");
+			header("Location: /pages/login");
 		} else {
 			// Something is wrong with the sql statement, check to make sure accounts table exists with all 3 fields.
 			echo 'Could not prepare statement!2';

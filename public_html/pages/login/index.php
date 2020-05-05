@@ -1,7 +1,5 @@
-
 <?php
 session_start();
-
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
     echo '<script>
 	alert("You are already logged in...");
@@ -35,7 +33,8 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
             <p style="font-size:35px;color: #696c6f;"> The game of being in a maze. </p>
         </div>
         <div class="jumbotron" style="box-shadow:0px 3px 15px rgba(0,0,0,.2);border: 2px solid #383b3e; padding-top: 25px;padding-bottom:15px; width:50%; min-width:350; max-width:500px; margin-left:auto; margin-right:auto; margin-top:15px;" >
-            <form class="form-signin" action="../../../private_php/connect/login.php" method="post">
+
+            <form class="form-signin" action="/../private_php/connect/login.php" method="post">
                 <h1 class="h3 mb-3 font-weight-normal">Login</h1>
                 <label for="user" class="sr-only">Username</label>
                 <input type="text" id="user" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required autofocus />
@@ -49,7 +48,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
                 ?>
 
                 <a class="btn btn-lg btn-primary" href="../register">Register</a>
-                <button class="btn btn-lg btn-primary"  type="submit">Login</button>
+                <button class="btn btn-lg btn-primary"  type="submit" name="login" >Login</button>
             </form>
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"/>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"/>

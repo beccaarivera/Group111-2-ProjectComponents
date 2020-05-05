@@ -1,5 +1,3 @@
-
-
 <?php
 require 'connect.php';
 if (!isset($_POST["level_selector"])) {

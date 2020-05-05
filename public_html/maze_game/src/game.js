@@ -131,7 +131,7 @@ function playerHit(player, spike) {
                     },
 
                     success: function(data, textStatus, jqXHR){
-                        window.location.href = "/public_html/pages/level-completed?level_number="+levelNumber + "&time_taken="+totalTime;
+                        window.location.href = "/pages/level-completed?level_number="+levelNumber + "&time_taken="+totalTime;
                     }
                 });
             });

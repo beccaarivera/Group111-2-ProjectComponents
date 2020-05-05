@@ -5,4 +5,4 @@ session_start();
     $_SESSION['user_uuid'] = null;
     $_SESSION['time_registered'] = null;
 session_destroy();
-header("Location: /public_html");
+header("Location: /");

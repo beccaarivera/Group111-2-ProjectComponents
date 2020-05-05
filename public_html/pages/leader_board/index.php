@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 ?>
@@ -19,7 +18,7 @@ session_start();
                 text-shadow: 0px 5px 12px rgba(0,0,0, .35);
                 padding:5px;
             }
-            .table{
+            .table{ 
                 border:none;
                 margin-left:auto;
                 margin-right:auto;
@@ -53,8 +52,7 @@ session_start();
 
     </head>
     <body>
-        <?php require_once '../../res/elements/navbar.php'; ?>
-
+        <?php require '../../res/elements/navbar.php'; ?>
 
         <h1>Leader Board!</h1>
         <div class="jumbotron container " id="parent">
@@ -64,7 +62,7 @@ session_start();
 
 
                     <?php
-                    $files = scandir("../../../maze_game/src/assets/tilemaps");
+                    $files = scandir("../../maze_game/src/assets/tilemaps");
                     $i = 1;
                     foreach ($files as $file) {
                         $len = strlen($file);
@@ -83,9 +81,8 @@ session_start();
                 </select>
             </form>
             <table class="table">
-
-
-                <?php require $_SERVER['DOCUMENT_ROOT'] . '/private_php/connect/leaderboard.php'; ?>
+<?php 
+                require '../../private_php/connect/leaderboard.php'; ?>
 
             </table>
         </div>

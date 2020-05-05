@@ -1,11 +1,9 @@
-<!doctype html>
-
 <?php
 session_start();
 
-if(!isset($_SESSION['logged_in']) && !$_SESSION['logged_in']){
+if(!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']){
     $_SESSION['login_error'] = 'You must be logged in to play the game!';
-    header('Location: ../../pages/login');
+    header('Location: /pages/login');
 }
 ?>
 <html>
@@ -100,7 +98,7 @@ if(!isset($_SESSION['logged_in']) && !$_SESSION['logged_in']){
                 <div class="btn-group-vertical" >
 
                     <?php
-                    $files = scandir("../../../maze_game/src/assets/tilemaps");
+                    $files = scandir("../../maze_game/src/assets/tilemaps");
                     $i = 1;
                     foreach ($files as $file) {
                         $len = strlen($file);
